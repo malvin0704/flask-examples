@@ -7,8 +7,8 @@
       <label for="name">What would you like us to call you?</label>
       <input name="name" id="name">
       <br>
-      <label for="pic16b">Are you in PIC16B?</label>
-      <input type="radio" name="student" id="yes" value="yes">
+      <label for="message">Your message:</label>
+      <input type="radio" name="message" id="yes" value="yes">
       <label for="yes">Yes</label>
       <input type="radio" name="student" id="no" value="no">
       <label for="No">No</label>
@@ -17,11 +17,11 @@
   </form>
   {% if name %}
   <br>
-  {% if student == "yes" %}
+  {% if message == "yes" %}
   <b>Hello {{name}}! </b>
   Click <a href="/profile/{{name}}">here</a> to go to a customized page just for you!
   {% else %}
-  <b>Hello {{name}}!  Do you want to take PIC16B?</b>
+  <b>Hello {{name}}!  Do you want to give us a message?</b>
   {% endif %}
   {% endif %}
 {% endblock %}
